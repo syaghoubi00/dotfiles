@@ -1,0 +1,16 @@
+configuration {
+    modi: "drun,window,ssh,combi";
+    combi-modes: "window,ssh,drun,run";
+    show-icons: true;
+    icon-theme: "Gruvbox-Plus-Dark";
+    markup: true;
+    drun-display-format: "{name}";
+    sidebar-mode: true;
+    hover-select: true;
+    display-combi: "All";
+    display-window: "Window";
+    display-drun: "Application";
+    display-ssh: "SSH";
+}
+
+@theme "~/.config/rofi/themes/gruvbox-rounded.rasi"
