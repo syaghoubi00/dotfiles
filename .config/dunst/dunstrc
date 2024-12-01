@@ -1,0 +1,32 @@
+[global]
+font = Monospace 12
+
+frame_width = 0
+gap_size = 2
+corner_radius = 10
+horizontal_padding = 14
+
+progress_bar_corner_radius = 10
+
+[urgency_low]
+background = "#292929E6"
+foreground = "#ebdbb2"
+timeout = 10
+
+[urgency_normal]
+background = "#a9b665E6"
+foreground = "#ebdbb2"
+timeout = 20
+override_pause_level = 30
+
+[urgency_critical]
+background = "#ea6962E6"
+foreground = "#ebdbb2"
+timeout = 0
+override_pause_level = 60
+
+[volume]
+stack_tag = volume
+urgency = low
+background = "#292929E6"
+highlight = "#7daea3ff"
