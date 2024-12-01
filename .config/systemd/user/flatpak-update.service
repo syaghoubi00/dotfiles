@@ -1,0 +1,7 @@
+[Unit]
+Description=Flatpak Update Notifier
+
+[Service]
+Type=oneshot
+## use bash -c to allow for non-absolute path
+ExecStart=bash -c ~/bin/flatpak-update.sh

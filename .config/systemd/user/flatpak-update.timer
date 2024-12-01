@@ -1,0 +1,12 @@
+[Unit]
+Description=Flatpak Update Notifier
+
+[Timer]
+## Run every 4 hours after init
+OnUnitInactiveSec=4hours
+## Initialize 1 minute after starting
+OnStartupSec=1minute
+Persistent=true
+
+[Install]
+WantedBy=timers.target
