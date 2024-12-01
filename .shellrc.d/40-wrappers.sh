@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -d ~/.shellrc.d.d/40-wrappers ]; then
+if [ -d ~/.shellrc.d/40-wrappers ]; then
   for rc in ~/.shellrc.d/40-wrappers/*.sh; do
     if [ -f "$rc" ]; then
       . "$rc"
