@@ -14,4 +14,6 @@
 
 70-completions
 
+80-bindings
+
 90-last
