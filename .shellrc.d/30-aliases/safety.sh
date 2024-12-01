@@ -3,7 +3,7 @@ alias rm='rm --interactive=once --preserve-root'
 
 ## Confirmation and verbosity
 alias mv='mv --interactive --verbose'
-alias cp='cp -interactive --verbose'
+alias cp='cp --interactive --verbose'
 alias ln='ln --interactive'
 
 ## Parenting changing perms on /
