@@ -1,0 +1,12 @@
+**
+!.bashrc
+!.bashrc.d/
+!.bashrc.d/**
+!.shellrc.d/
+!.shellrc.d/**
+!bin/
+!bin/**
+!.config/
+!.config/**
+!.gitignore
+!.gitmodules
