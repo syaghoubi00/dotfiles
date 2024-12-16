@@ -1,18 +1,19 @@
 return {
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   opts = {
-  --     transparent = true,
-  --     styles = {
-  --       sidebars = "transparent",
-  --       floats = "transparent",
-  --     },
-  --   },
-  -- },
+  --[[ {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  }, ]]
   {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = {
+      integrations = { blink_cmp = true },
       transparent_background = true,
       -- term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
       color_overrides = {
