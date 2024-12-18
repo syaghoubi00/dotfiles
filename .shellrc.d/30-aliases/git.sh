@@ -10,4 +10,7 @@ if command -v git >/dev/null 2>&1; then
   alias gai="git add --interactive" # interactive file picker
 
   alias gc="git commit"
+
+  ## git ls-files
+  alias glsu="git ls-files --others --exclude-standard" # list untracked files, respecting .gitignore
 fi
