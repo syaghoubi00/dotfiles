@@ -3,7 +3,11 @@
 if command -v git >/dev/null 2>&1; then
   alias gs="git status"
   alias gd="git diff"
+
+  ## git add
   alias ga="git add"
-  alias gau="git add -u" # stages all modified and deleted tracked files.
+  alias gau="git add --update"      # stages all modified and deleted tracked files.
+  alias gai="git add --interactive" # interactive file picker
+
   alias gc="git commit"
 fi
