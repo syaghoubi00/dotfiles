@@ -1,9 +1,16 @@
 #!/bin/sh
 
 if command -v git >/dev/null 2>&1; then
-  alias gs="git status"
-  alias gd="git diff"
   alias gc="git commit"
+
+  ## git status
+  alias gs="git status"
+  alias gss="git status --short --untracked-files=no"   # status of staged/unstaged files
+  alias gsd="git status --verbose --untracked-files=no" # status with diff
+
+  ## git diff
+  alias gd="git diff"           # diff of unstaged changes
+  alias gds="git diff --staged" # diff of staged changes
 
   ## git add
   alias ga="git add"
