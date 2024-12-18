@@ -35,6 +35,11 @@ return {
           crust = "#141617",
         },
       },
+
+      -- Make blink.cmp menu transparent
+      function()
+        vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "NONE", fg = "#ffffff", blend = 0 })
+      end,
     },
   },
   {
