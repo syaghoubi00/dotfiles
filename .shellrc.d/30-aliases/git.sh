@@ -12,5 +12,6 @@ if command -v git >/dev/null 2>&1; then
   alias gc="git commit"
 
   ## git ls-files
+  alias gls="git ls-files"                              # list tracked files
   alias glsu="git ls-files --others --exclude-standard" # list untracked files, respecting .gitignore
 fi
