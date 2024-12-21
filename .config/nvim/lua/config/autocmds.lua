@@ -3,6 +3,7 @@
 -- Add any additional autocmds here
 
 -- YAML key sorting
+-- NOTE: There is a Code Action to sort keys, but it is not recursive
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "yaml",
   callback = function()
