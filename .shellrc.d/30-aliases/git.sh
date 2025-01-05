@@ -2,6 +2,8 @@
 
 if command -v git >/dev/null 2>&1; then
   alias gc="git commit"
+  alias gl="git log --abbrev-commit"
+  alias glg="git log --oneline --graph"
 
   ## git status
   alias gs="git status"
