@@ -1,4 +1,4 @@
-# A Better $SHELL experience
+# A Better `$SHELL` experience
 
 Source this folder (`~/.shellrc.d/*.sh`) from your shell configuration file:
 
@@ -13,23 +13,7 @@ if [ -d ~/.shellrc.d ]; then
 fi
 ```
 
-I tried to make as much as I could POSIX shell compliant with a generic `#!/bin/sh` interpreter directive (shebang line).
-Functions using arrays use `bash` (as those aren't a POSIX capability), which most other `$SHELL`'s will be able to run.
-
-**Directory Structure:**
-
-10-shell
-
-20-environment
-
-30-aliases
-
-40-wrappers
-
-50-functions
-
-70-completions
-
-80-bindings
-
-99-last
+I tried to make as much as I could POSIX shell compliant with a generic
+`#!/bin/sh` interpreter directive (shebang line). Functions using arrays use
+`bash` (as those aren't a POSIX capability), which most other `$SHELL`'s will
+be able to run.
