@@ -88,7 +88,7 @@ return {
   },
   keys = {
     -- Code related commands for the default prompts
-    { "<leader>ac", desc = "Code Prompts (CopilotChat)", mode = { "n", "v" } },
+    { "<leader>ac", "", desc = "+Code Prompts (CopilotChat)", mode = { "n", "v" } },
     { "<leader>ace", "<cmd>CopilotChatExplain<cr>", desc = "Explain code" },
     { "<leader>acr", "<cmd>CopilotChatReview<cr>", desc = "Review code" },
     { "<leader>acf", "<cmd>CopilotChatFix<cr>", desc = "Fix Code" },
@@ -98,10 +98,10 @@ return {
     { "<leader>acm", "<cmd>CopilotChatCommit<cr>", desc = "Generate Commit Message" },
 
     -- Prompt group for writing text (not code)
-    { "<leader>aw", desc = "Writting Prompts (CopilotChat)", mode = { "n", "v" } },
+    { "<leader>aw", "", desc = "+Writting Prompts (CopilotChat)", mode = { "n", "v" } },
 
     -- Copilot Chat Setup
-    { "<leader>as", desc = "Setup (CopilotChat)", mode = { "n", "v" } },
+    { "<leader>as", "", desc = "+Setup (CopilotChat)", mode = { "n", "v" } },
     -- Copilot Chat Models
     { "<leader>asm", "<cmd>CopilotChatModels<cr>", desc = "Select Model (CopilotChat)", mode = { "n", "v" } },
     -- Copilot Chat Agents
@@ -161,7 +161,9 @@ return {
       function()
         local input = vim.fn.input("Quick Chat: ")
         if input ~= "" then
-          require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+          require("CopilotChat").ask(input, {
+            selection = require("CopilotChat").visual,
+          })
         end
       end,
       desc = "Quick Chat (CopilotChat)",
