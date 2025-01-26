@@ -196,7 +196,7 @@ return {
           require("CopilotChat").ask("@perplexityai " .. input, {})
         end
       end,
-      desc = "Quick Chat with Perplexity (CopilotChat)",
+      desc = "Perplexity Search (CopilotChat)",
       mode = { "n", "v" },
     },
   },
