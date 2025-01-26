@@ -37,6 +37,9 @@ return {
     model = "claude-3.5-sonnet",
     -- context = { "buffer", "buffers", "file", "files", "files:list", "files:full", "git" },
     insert_at_end = true, -- Automatically enter insert mode when opening window and on new prompt
+    highlight_headers = false,
+    separator = "---",
+    error_header = "> [!ERROR] Error",
     -- TODO: Move prompts to a separate file?
     prompts = {
       -- NOTE: Some of the prompts seem to be too verbose
