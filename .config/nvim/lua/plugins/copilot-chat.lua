@@ -89,8 +89,8 @@ return {
     { "<leader>ace", "<cmd>CopilotChatExplain<cr>", desc = "Explain code" },
     { "<leader>acr", "<cmd>CopilotChatReview<cr>", desc = "Review code" },
     { "<leader>acf", "<cmd>CopilotChatFix<cr>", desc = "Fix Code" },
-    { "<leader>acf", "<cmd>CopilotChatOptimize<cr>", desc = "Optimize Performance and Readability" },
-    { "<leader>act", "<cmd>CopilotChatDocs<cr>", desc = "Add Documentation Comments" },
+    { "<leader>aco", "<cmd>CopilotChatOptimize<cr>", desc = "Optimize Performance and Readability" },
+    { "<leader>acd", "<cmd>CopilotChatDocs<cr>", desc = "Add Documentation Comments" },
     { "<leader>act", "<cmd>CopilotChatTests<cr>", desc = "Generate Tests" },
     { "<leader>acm", "<cmd>CopilotChatCommit<cr>", desc = "Generate Commit Message" },
 
@@ -103,6 +103,26 @@ return {
     { "<leader>asm", "<cmd>CopilotChatModels<cr>", desc = "Select Model (CopilotChat)", mode = { "n", "v" } },
     -- Copilot Chat Agents
     { "<leader>asa", "<cmd>CopilotChatAgents<cr>", desc = "Select Agent (CopilotChat)", mode = { "n", "v" } },
+    {
+      "<leader>asc",
+      function()
+        local model = "claude-3.5-sonnet"
+        require("CopilotChat").config.model = model
+        vim.notify("CopilotChat model set to: " .. model, vim.log.levels.INFO)
+      end,
+      desc = "Use Claude (CopilotChat)",
+      mode = { "n", "v" },
+    },
+    {
+      "<leader>asg",
+      function()
+        local model = "gpt-4o"
+        require("CopilotChat").config.model = model
+        vim.notify("CopilotChat model set to: " .. model, vim.log.levels.INFO)
+      end,
+      desc = "Use gpt-4o (CopilotChat)",
+      mode = { "n", "v" },
+    },
 
     -- Unset default keybinding to reset copilot chat
     { "<leader>ax", false },
@@ -160,6 +180,20 @@ return {
         })
       end,
       desc = "Toggle - Float (CopilotChat)",
+      mode = { "n", "v" },
+    },
+
+    -- Ask the Perplexity agent a quick question
+    -- BUG: Unable to pass an empty selection to agent
+    {
+      "<leader>aS",
+      function()
+        local input = vim.fn.input("Perplexity: ")
+        if input ~= "" then
+          require("CopilotChat").ask("@perplexityai " .. input, {})
+        end
+      end,
+      desc = "Quick Chat with Perplexity (CopilotChat)",
       mode = { "n", "v" },
     },
   },
