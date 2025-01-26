@@ -87,7 +87,14 @@ return {
     },
   },
   keys = {
-    -- Code related commands for the default prompts
+    -- Unset default keybinding to reset copilot chat
+    { "<leader>ax", false },
+    { "<leader>ax", "<cmd>CopilotChatStop<cr>", desc = "Stop Current Output (CopilotChat)", mode = { "n", "v" } },
+
+    -- GROUP: Prompt group for writing text (not code)
+    { "<leader>aw", "", desc = "+Writting Prompts (CopilotChat)", mode = { "n", "v" } },
+
+    -- GROUP: Code related commands for the default prompts
     { "<leader>ac", "", desc = "+Code Prompts (CopilotChat)", mode = { "n", "v" } },
     { "<leader>ace", "<cmd>CopilotChatExplain<cr>", desc = "Explain code" },
     { "<leader>acr", "<cmd>CopilotChatReview<cr>", desc = "Review code" },
@@ -97,10 +104,7 @@ return {
     { "<leader>act", "<cmd>CopilotChatTests<cr>", desc = "Generate Tests" },
     { "<leader>acm", "<cmd>CopilotChatCommit<cr>", desc = "Generate Commit Message" },
 
-    -- Prompt group for writing text (not code)
-    { "<leader>aw", "", desc = "+Writting Prompts (CopilotChat)", mode = { "n", "v" } },
-
-    -- Copilot Chat Setup
+    -- GROUP: Copilot Chat Setup
     { "<leader>as", "", desc = "+Setup (CopilotChat)", mode = { "n", "v" } },
     -- Copilot Chat Models
     { "<leader>asm", "<cmd>CopilotChatModels<cr>", desc = "Select Model (CopilotChat)", mode = { "n", "v" } },
@@ -126,10 +130,6 @@ return {
       desc = "Use gpt-4o (CopilotChat)",
       mode = { "n", "v" },
     },
-
-    -- Unset default keybinding to reset copilot chat
-    { "<leader>ax", false },
-    { "<leader>ax", "<cmd>CopilotChatStop<cr>", desc = "Stop Current Output (CopilotChat)", mode = { "n", "v" } },
 
     -- Clear buffer and chat history
     {
@@ -184,6 +184,31 @@ return {
         })
       end,
       desc = "Toggle - Float (CopilotChat)",
+      mode = { "n", "v" },
+    },
+
+    -- GROUP: Chat History
+    { "<leader>ah", "", desc = "+History (CopilotChat)", mode = { "n", "v" } },
+    {
+      "<leader>ahs",
+      function()
+        local input = vim.fn.input("Save CopilotChat History as (name): ")
+        if input ~= "" then
+          require("CopilotChat").save(input)
+        end
+      end,
+      desc = "Save History (CopilotChat)",
+      mode = { "n", "v" },
+    },
+    {
+      "<leader>ahl",
+      function()
+        local input = vim.fn.input("Load CopilotChat History (name): ")
+        if input ~= "" then
+          require("CopilotChat").load(input)
+        end
+      end,
+      desc = "Load History (CopilotChat)",
       mode = { "n", "v" },
     },
 
