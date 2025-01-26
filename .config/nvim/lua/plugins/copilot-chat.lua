@@ -213,13 +213,15 @@ return {
     },
 
     -- Ask the Perplexity agent a quick question
-    -- BUG: Unable to pass an empty selection to agent
     {
       "<leader>aS",
       function()
         local input = vim.fn.input("Perplexity: ")
         if input ~= "" then
-          require("CopilotChat").ask("@perplexityai " .. input, {})
+          require("CopilotChat").ask(input, {
+            agent = "perplexityai",
+            selection = false,
+          })
         end
       end,
       desc = "Perplexity Search (CopilotChat)",
