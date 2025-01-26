@@ -155,15 +155,12 @@ return {
     -- Unset existing quick chat keybinding
     { "<leader>aq", false },
     -- Quick chat with Copilot (Include content of buffer)
-    -- TODO: Use selection or buffer context if no selection is made
     {
       "<leader>aq",
       function()
         local input = vim.fn.input("Quick Chat: ")
         if input ~= "" then
-          require("CopilotChat").ask(input, {
-            selection = require("CopilotChat").visual,
-          })
+          require("CopilotChat").ask(input, {})
         end
       end,
       desc = "Quick Chat (CopilotChat)",
