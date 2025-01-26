@@ -129,6 +129,8 @@ return {
 
     -- Unset default keybinding to reset copilot chat
     { "<leader>ax", false },
+    { "<leader>ax", "<cmd>CopilotChatStop<cr>", desc = "Stop Current Output (CopilotChat)", mode = { "n", "v" } },
+
     -- Clear buffer and chat history
     {
       "<leader>al",
@@ -169,7 +171,7 @@ return {
 
     -- Open Copilot Chat in a floating window
     {
-      "<leader>ax",
+      "<leader>af",
       function()
         require("CopilotChat").open({
           window = {
