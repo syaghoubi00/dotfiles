@@ -1,5 +1,5 @@
 -- Constants
-local PROMPT_PATH = "/lua/prompts/"
+local PROMPT_PATH = "/prompts/"
 
 ---Reads and validates a prompt file from the config directory
 ---@param filename string The name of the prompt file to read
