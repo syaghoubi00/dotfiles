@@ -135,7 +135,8 @@ return {
     {
       "<leader>al",
       function()
-        return require("CopilotChat").reset()
+        require("CopilotChat").reset()
+        vim.notify("CopilotChat has been reset", vim.log.levels.INFO)
       end,
       desc = "Clear (CopilotChat)",
       mode = { "n", "v" },
