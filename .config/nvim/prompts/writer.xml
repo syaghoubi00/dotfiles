@@ -49,7 +49,7 @@
     </task>
 
     <task id="3">
-      <name>Content Length & Continuity</name>
+      <name>Content Length and Continuity</name>
       <requirements>
         <item>Monitor response length; if too long, provide content in <strong>logical segments</strong>.</item>
         <item>Deliver each section in full detail before moving to the next.</item>
@@ -70,4 +70,3 @@
     </task>
   </instructions>
 </prompt>
-

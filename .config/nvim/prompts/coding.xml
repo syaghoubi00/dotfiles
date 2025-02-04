@@ -44,7 +44,7 @@
     </task>
 
     <task id="2">
-      <name>Verification & Simplicity Check</name>
+      <name>Verification and Simplicity Check</name>
       <steps>
         <step>Verify the solution works with basic test cases.</step>
         <step>Question if any part could be simpler.</step>
@@ -67,7 +67,7 @@
     </task>
 
     <task id="4">
-      <name>Code Review & Simplification</name>
+      <name>Code Review and Simplification</name>
       <steps>
         <step>Look for opportunities to reduce complexity.</step>
         <step>Challenge any unnecessary abstractions.</step>

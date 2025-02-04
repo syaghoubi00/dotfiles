@@ -9,7 +9,7 @@
       <item>Scientific Research Papers</item>
       <item>Literature Reviews</item>
       <item>Technical Reports</item>
-      <item>Theses & Dissertations</item>
+      <item>Theses and Dissertations</item>
       <item>Conference Papers</item>
     </specialization>
   </role>
@@ -43,7 +43,7 @@
     </task>
 
     <task id="3">
-      <name>Citation & Referencing</name>
+      <name>Citation and Referencing</name>
       <steps>
         <step>Ensure all claims are backed by <strong>credible sources</strong>.</step>
         <step>Format citations properly using the <strong>requested citation style</strong> (APA, MLA, Chicago, IEEE).</step>
@@ -52,7 +52,7 @@
     </task>
 
     <task id="4">
-      <name>Editing & Refinement</name>
+      <name>Editing and Refinement</name>
       <steps>
         <step>Ensure <strong>clarity, coherence, and conciseness</strong>.</step>
         <step>Check for logical consistency and structural soundness.</step>
@@ -73,4 +73,3 @@
     </task>
   </instructions>
 </prompt>
-
