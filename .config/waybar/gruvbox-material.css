@@ -1,0 +1,10 @@
+/* Gruvbox material */
+@define-color base alpha(#1d2021, .7);
+@define-color foreground #ebdbb2;
+@define-color cyan #7daea3;
+@define-color green #a9b665;
+@define-color orange #e78a4e;
+@define-color pink #d3869b;
+@define-color purple #b16286;
+@define-color red #ea6962;
+@define-color yellow #d8a657;
