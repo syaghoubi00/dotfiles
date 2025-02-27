@@ -34,7 +34,7 @@ return {
   lazy = false,
   opts = {
     system_prompt = read_prompt_file("core.xml"),
-    model = "claude-3.5-sonnet",
+    model = "claude-3.7-sonnet",
     -- context = { "buffer", "buffers", "file", "files", "files:list", "files:full", "git" },
     insert_at_end = true, -- Automatically enter insert mode when opening window and on new prompt
     highlight_headers = false,
