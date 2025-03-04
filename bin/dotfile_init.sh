@@ -17,3 +17,15 @@ wget -qO "$tmp_path" https://github.com/ryanoasis/nerd-fonts/releases/latest/dow
 mkdir -p "$font_dir"
 unzip -d "$font_dir" "$tmp_path"
 rm "$tmp_path"
+
+cat <<'EOF' >>~/.bashrc
+
+if [ -d ~/.shellrc.d ]; then
+  for rc in ~/.shellrc.d/*.sh; do
+    if [ -f "$rc" ]; then
+      . "$rc"
+    fi
+  done
+  unset rc
+fi
+EOF
