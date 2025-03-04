@@ -113,7 +113,7 @@ return {
     {
       "<leader>asc",
       function()
-        local model = "claude-3.5-sonnet"
+        local model = "claude-3.7-sonnet"
         require("CopilotChat").config.model = model
         vim.notify("CopilotChat model set to: " .. model, vim.log.levels.INFO)
       end,
