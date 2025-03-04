@@ -12,6 +12,8 @@ wget -O ~/bin/sway-autotiling.py https://raw.githubusercontent.com/nwg-piotr/aut
 ## unzip can't process files from stdin, so create tmp
 tmp_dir=$(mktemp -d)
 tmp_path="$tmp_dir"/nerdfont.zip
+font_dir="$HOME/.local/share/fonts/nerdfonts/JetBrainsMono"
 wget -qO "$tmp_path" https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-unzip -d ~/.local/share/fonts/nerdfonts/JetBrainsMono "$tmp_path"
+mkdir -p "$font_dir"
+unzip -d "$font_dir" "$tmp_path"
 rm "$tmp_path"
