@@ -7,6 +7,14 @@ Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Ke
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
+[com.brave.Browser]
+_k_friendly_name=com.brave.Browser
+autofill_card=none,none,Autofill the last used card for the current website
+autofill_identity=none,none,Autofill the last used identity for the current website
+autofill_login=Ctrl+Shift+L,Ctrl+Shift+L,Autofill the last used login for the current website
+generate_password=Ctrl+Shift+9,Ctrl+Shift+9,Generate and copy a new random password to the clipboard
+lock_vault=none,none,Lock the vault
+
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility
@@ -14,7 +22,7 @@ _k_friendly_name=Accessibility
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,
 Enable Touchpad=Touchpad On,Touchpad On,
-Toggle Touchpad=Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,
+Toggle Touchpad=Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Touchpad Toggle\tTouchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,
 _k_friendly_name=Touchpad
 
 [kmix]
@@ -260,4 +268,4 @@ toggle do not disturb=none,,Toggle do not disturb
 _launch=Meta+Return
 
 [services][org.kde.krunner.desktop]
-RunClipboard=Meta+Space\tAlt+Shift+F2
+_launch=Alt+F2\tSearch\tMeta+Space\tAlt+Space
