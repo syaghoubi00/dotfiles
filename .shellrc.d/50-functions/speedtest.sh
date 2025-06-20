@@ -5,10 +5,10 @@
 if command -v iperf3 >/dev/null 2>&1; then
   ## Parse North America server list, selecting a random server
   get_iperf_server() {
-    SERVER_LIST="https://export.iperf3serverlist.net/json.php"
+    SERVER_LIST="https://export.iperf3serverlist.net/unparsed_iperf3_servers.json"
 
     if curl --output /dev/null --silent --head --fail "$SERVER_LIST"; then
-      curl --silent "$SERVER_LIST" | jq -r '.[] | select( .COUNTRY | contains("US")) | .IP_HOST' | shuf -n1 | cut -d ' ' -f 2-5
+      curl --silent "$SERVER_LIST" | jq -r '.[] | select( .COUNTRY | contains("US")) | ."IP/HOST"' | shuf -n1 | cut -d ' ' -f 2-5
     else
       echo "Unable to fetch iperf server"
       return 1
